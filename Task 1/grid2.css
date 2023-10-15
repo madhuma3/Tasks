@@ -1,0 +1,62 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+            'navigation header header header'
+            'navigation card1 card2 card3'
+            'navigation card1 card2 card4'
+            'navigation footer footer footer';
+    gap: 10px;
+    margin: 10px;
+}
+
+#header,
+#nav,
+#card1,
+#card2,
+#card3,
+#card4,
+#footer{
+    background-color: rgba(182, 38, 38, 0.897);
+    border: 2px solid white;
+    color: black;
+    padding: 20PX;
+}
+#nav{
+    grid-area: navigation;
+    text-align: center;
+}
+#header{
+    grid-area: header;
+    text-align: center;
+}
+#card1{
+    grid-area: card1;
+    text-align: center;
+}
+#card2{
+    grid-area: card2;
+    text-align: center;
+}
+#card3{
+    grid-area: card3;
+    text-align: center;
+}
+#card4{
+    grid-area: card4;
+    text-align: center;
+}
+#footer{
+    grid-area: footer;
+    text-align: center;
+}
+
+

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    background-image: url('./choco-cake-food.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+.navbar{
+    width: 1000px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    height: 70px;
+    float: left;
+}
+.logo{
+    color: floralwhite;
+    padding: 20px;
+    margin-left: -160px;
+    
+
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 25px;
+    font-size: 17px;
+}
+ul li a{
+    color: floralwhite;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+ul li a:hover{
+    color: rgb(250, 8, 8);
+}
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 450px;
+    color: floralwhite;
+
+}
+.srch{
+    width: 220px;
+    height: 40px;
+    border: 1px solid red;
+    background: transparent;
+    border-radius: 10px 0;
+    font-size: 20px;
+    float: left;
+    
+}
+.btn{
+    width: 80px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+    border-radius: 6px 0;
+    border: 1px solid red;
+    background: transparent;
+    color: floralwhite;
+}
+.content{
+    color: floralwhite;
+    padding: 10px;
+    
+}
+.content h1{
+    width: 80px;
+    height: 40vh;
+    text-shadow: 2px 2px 2px rgb(212, 99, 99);
+    letter-spacing: 4px;
+    padding-bottom: 10px;
+    font-size: 45px;
+}

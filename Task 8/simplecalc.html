@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interest Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: rgb(218, 79, 102)
+
+            
+        }
+        #calculator {
+            width: 500px;
+            height: 60vh;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 30px 0px;
+            box-shadow: 0px 20px 60px;
+            background: white;   
+        }
+        h2{
+            background-color: rgb(165, 45, 45);
+            border: 1px solid black;
+            border-radius: 15px 0px;
+            width: 300px;
+            margin-left:100px ;
+            height: 40px;
+            padding-top: 10px;
+            color: white;
+        }
+        label{
+            font-size: 25px;
+            font-weight: 200;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 20px;
+        }
+        button{
+            width: 150px;
+            padding: 10px;
+            margin: 30px 20px 30px 50px;
+            font-size: 14px;
+            background-color: rgb(165, 45, 45);
+            font-weight: 300;
+            border-radius: 15px 0;
+            color: white;
+
+            
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <h2>Interest Calculator</h2>
+        <label for="principal">Principal</label>
+        <input type="number" id="principal" placeholder="Enter principal amount"><br><br>
+        
+        <label for="rate">Interest rate (%)</label>
+        <input type="number" id="rate" placeholder="Enter annual interest rate"><br><br>
+        
+        <label for="time">Time (years)</label>
+        <input type="number" id="time" placeholder="Enter time in years"><br><br>
+        
+        <label for="result">Result</label>
+        <input type="text" id="result" readonly><br><br>
+        
+        <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+        <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+    </div>
+
+    <script>
+        function calculateSimpleInterest() {
+            const principal = parseFloat(document.getElementById("principal").value);
+            const rate = parseFloat(document.getElementById("rate").value);
+            const time = parseFloat(document.getElementById("time").value);
+            
+            const simpleInterest = (principal * rate * time) / 100;
+            document.getElementById("result").value = "Simple Interest: rs" + simpleInterest.toFixed(2);
+        }
+        
+        function calculateCompoundInterest() {
+            const principal = parseFloat(document.getElementById("principal").value);
+            const rate = parseFloat(document.getElementById("rate").value);
+            const time = parseFloat(document.getElementById("time").value);
+            
+            const compoundInterest = principal * Math.pow((1 + rate / 100), time) - principal;
+            document.getElementById("result").value = "Compound Interest: rs" + compoundInterest.toFixed(2);
+        }
+    </script>
+</body>
+</html>
